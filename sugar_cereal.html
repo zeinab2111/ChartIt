@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<div>
+  <canvas id="mychart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://raw.githubusercontent.com/chartjs/Chart.js/master/docs/scripts/utils.js"></script> -->
+<script>
+const data = [
+{cereal:"100% Bran",calories:"70",sugar:"6"},
+{cereal:"100% Natural Bran",calories:"120",sugar:"8"},
+{cereal:"All-Bran",calories:"70",sugar:"5"},
+{cereal:"All-Bran with Extra Fiber",calories:"50",sugar:"0"},
+{cereal:"Almond Delight",calories:"110",sugar:"8"},
+{cereal:"Apple Cinnamon Cheerios",calories:"110",sugar:"10"},
+{cereal:"Apple Jacks",calories:"110",sugar:"14"},
+{cereal:"Basic 4",calories:"130",sugar:"8"},
+{cereal:"Bran Chex",calories:"90",sugar:"6"},
+{cereal:"Bran Flakes",calories:"90",sugar:"5"},
+{cereal:"Cap'n'Crunch",calories:"120",sugar:"12"},
+{cereal:"Cheerios",calories:"110",sugar:"1"},
+{cereal:"Cinnamon Toast Crunch",calories:"120",sugar:"9"},
+{cereal:"Clusters",calories:"110",sugar:"7"},
+{cereal:"Cocoa Puffs",calories:"110",sugar:"13"},
+{cereal:"Corn Chex",calories:"110",sugar:"3"},
+{cereal:"Corn Flakes",calories:"100",sugar:"2"},
+{cereal:"Corn Pops",calories:"110",sugar:"12"},
+{cereal:"Count Chocula",calories:"110",sugar:"13"},
+{cereal:"Cracklin' Oat Bran",calories:"110",sugar:"7"},
+{cereal:"Cream of Wheat (Quick)",calories:"100",sugar:"0"},
+{cereal:"Crispix",calories:"110",sugar:"3"},
+{cereal:"Crispy Wheat & Raisins",calories:"100",sugar:"10"},
+{cereal:"Double Chex",calories:"100",sugar:"5"},
+{cereal:"Froot Loops",calories:"110",sugar:"13"},
+{cereal:"Frosted Flakes",calories:"110",sugar:"11"},
+{cereal:"Frosted Mini-Wheats",calories:"100",sugar:"7"},
+{cereal:"Fruit & Fibre Dates, Walnuts, and Oats",calories:"120",sugar:"10"},
+{cereal:"Fruitful Bran",calories:"120",sugar:"12"},
+{cereal:"Fruity Pebbles",calories:"110",sugar:"12"},
+{cereal:"Golden Crisp",calories:"100",sugar:"15"},
+{cereal:"Golden Grahams",calories:"110",sugar:"9"},
+{cereal:"Grape Nuts Flakes",calories:"100",sugar:"5"},
+{cereal:"Grape-Nuts",calories:"110",sugar:"3"},
+{cereal:"Great Grains Pecan",calories:"120",sugar:"4"},
+{cereal:"Honey Graham Ohs",calories:"120",sugar:"11"},
+{cereal:"Honey Nut Cheerios",calories:"110",sugar:"10"},
+{cereal:"Honey-comb",calories:"110",sugar:"11"},
+{cereal:"Just Right Crunchy  Nuggets",calories:"110",sugar:"6"},
+{cereal:"Just Right Fruit & Nut",calories:"140",sugar:"9"},
+{cereal:"Kix",calories:"110",sugar:"3"},
+{cereal:"Life",calories:"100",sugar:"6"},
+{cereal:"Lucky Charms",calories:"110",sugar:"12"},
+{cereal:"Maypo",calories:"100",sugar:"3"},
+{cereal:"Muesli Raisins, Dates, & Almonds",calories:"150",sugar:"11"},
+{cereal:"Muesli Raisins, Peaches, & Pecans",calories:"150",sugar:"11"},
+{cereal:"Mueslix Crispy Blend",calories:"160",sugar:"13"},
+{cereal:"Multi-Grain Cheerios",calories:"100",sugar:"6"},
+{cereal:"Nut&Honey Crunch",calories:"120",sugar:"9"},
+{cereal:"Nutri-Grain Almond-Raisin",calories:"140",sugar:"7"},
+{cereal:"Nutri-grain Wheat",calories:"90",sugar:"2"},
+{cereal:"Oatmeal Raisin Crisp",calories:"130",sugar:"10"},
+{cereal:"Post Nat. Raisin Bran",calories:"120",sugar:"14"},
+{cereal:"Product 19",calories:"100",sugar:"3"},
+{cereal:"Puffed Rice",calories:"50",sugar:"0"},
+{cereal:"Puffed Wheat",calories:"50",sugar:"0"},
+{cereal:"Quaker Oat Squares",calories:"100",sugar:"6"},
+{cereal:"Quaker Oatmeal",calories:"100",sugar:"-1"},
+{cereal:"Raisin Bran",calories:"120",sugar:"12"},
+{cereal:"Raisin Nut Bran",calories:"100",sugar:"8"},
+{cereal:"Raisin Squares",calories:"90",sugar:"6"},
+{cereal:"Rice Chex",calories:"110",sugar:"2"},
+{cereal:"Rice Krispies",calories:"110",sugar:"3"},
+{cereal:"Shredded Wheat",calories:"80",sugar:"0"},
+{cereal:"Shredded Wheat 'n'Bran",calories:"90",sugar:"0"},
+{cereal:"Shredded Wheat spoon size",calories:"90",sugar:"0"},
+{cereal:"Smacks",calories:"110",sugar:"15"},
+{cereal:"Special K",calories:"110",sugar:"3"},
+{cereal:"Strawberry Fruit Wheats",calories:"90",sugar:"5"},
+{cereal:"Total Corn Flakes",calories:"110",sugar:"3"},
+{cereal:"Total Raisin Bran",calories:"140",sugar:"14"},
+{cereal:"Total Whole Grain",calories:"100",sugar:"3"},
+{cereal:"Triples",calories:"110",sugar:"3"},
+{cereal:"Trix",calories:"110",sugar:"12"},
+{cereal:"Wheat Chex",calories:"100",sugar:"3"},
+{cereal:"Wheaties",calories:"100",sugar:"3"},
+{cereal:"Wheaties Honey Gold",calories:"110",sugar:"8"},
+];
+const filteredData = data.filter(row => row.calories>100);
+new Chart(
+document.getElementById('mychart'),
+{
+type: 'line',
+data: {
+labels: filteredData.map(row => row.cereal),
+datasets: [
+{
+label: "sugar",
+data: filteredData.map(row => row.sugar),
+},
+]
+}
+}
+);
+
+</script>
+</body>

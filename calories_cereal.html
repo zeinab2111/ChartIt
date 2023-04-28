@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<div>
+  <canvas id="mychart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://raw.githubusercontent.com/chartjs/Chart.js/master/docs/scripts/utils.js"></script> -->
+<script>
+const data = [
+{cereal:"100% Bran",calories:"70"},
+{cereal:"100% Natural Bran",calories:"120"},
+{cereal:"All-Bran",calories:"70"},
+{cereal:"All-Bran with Extra Fiber",calories:"50"},
+{cereal:"Almond Delight",calories:"110"},
+{cereal:"Apple Cinnamon Cheerios",calories:"110"},
+{cereal:"Apple Jacks",calories:"110"},
+{cereal:"Basic 4",calories:"130"},
+{cereal:"Bran Chex",calories:"90"},
+{cereal:"Bran Flakes",calories:"90"},
+{cereal:"Cap'n'Crunch",calories:"120"},
+{cereal:"Cheerios",calories:"110"},
+{cereal:"Cinnamon Toast Crunch",calories:"120"},
+{cereal:"Clusters",calories:"110"},
+{cereal:"Cocoa Puffs",calories:"110"},
+{cereal:"Corn Chex",calories:"110"},
+{cereal:"Corn Flakes",calories:"100"},
+{cereal:"Corn Pops",calories:"110"},
+{cereal:"Count Chocula",calories:"110"},
+{cereal:"Cracklin' Oat Bran",calories:"110"},
+{cereal:"Cream of Wheat (Quick)",calories:"100"},
+{cereal:"Crispix",calories:"110"},
+{cereal:"Crispy Wheat & Raisins",calories:"100"},
+{cereal:"Double Chex",calories:"100"},
+{cereal:"Froot Loops",calories:"110"},
+{cereal:"Frosted Flakes",calories:"110"},
+{cereal:"Frosted Mini-Wheats",calories:"100"},
+{cereal:"Fruit & Fibre Dates, Walnuts, and Oats",calories:"120"},
+{cereal:"Fruitful Bran",calories:"120"},
+{cereal:"Fruity Pebbles",calories:"110"},
+{cereal:"Golden Crisp",calories:"100"},
+{cereal:"Golden Grahams",calories:"110"},
+{cereal:"Grape Nuts Flakes",calories:"100"},
+{cereal:"Grape-Nuts",calories:"110"},
+{cereal:"Great Grains Pecan",calories:"120"},
+{cereal:"Honey Graham Ohs",calories:"120"},
+{cereal:"Honey Nut Cheerios",calories:"110"},
+{cereal:"Honey-comb",calories:"110"},
+{cereal:"Just Right Crunchy  Nuggets",calories:"110"},
+{cereal:"Just Right Fruit & Nut",calories:"140"},
+{cereal:"Kix",calories:"110"},
+{cereal:"Life",calories:"100"},
+{cereal:"Lucky Charms",calories:"110"},
+{cereal:"Maypo",calories:"100"},
+{cereal:"Muesli Raisins, Dates, & Almonds",calories:"150"},
+{cereal:"Muesli Raisins, Peaches, & Pecans",calories:"150"},
+{cereal:"Mueslix Crispy Blend",calories:"160"},
+{cereal:"Multi-Grain Cheerios",calories:"100"},
+{cereal:"Nut&Honey Crunch",calories:"120"},
+{cereal:"Nutri-Grain Almond-Raisin",calories:"140"},
+{cereal:"Nutri-grain Wheat",calories:"90"},
+{cereal:"Oatmeal Raisin Crisp",calories:"130"},
+{cereal:"Post Nat. Raisin Bran",calories:"120"},
+{cereal:"Product 19",calories:"100"},
+{cereal:"Puffed Rice",calories:"50"},
+{cereal:"Puffed Wheat",calories:"50"},
+{cereal:"Quaker Oat Squares",calories:"100"},
+{cereal:"Quaker Oatmeal",calories:"100"},
+{cereal:"Raisin Bran",calories:"120"},
+{cereal:"Raisin Nut Bran",calories:"100"},
+{cereal:"Raisin Squares",calories:"90"},
+{cereal:"Rice Chex",calories:"110"},
+{cereal:"Rice Krispies",calories:"110"},
+{cereal:"Shredded Wheat",calories:"80"},
+{cereal:"Shredded Wheat 'n'Bran",calories:"90"},
+{cereal:"Shredded Wheat spoon size",calories:"90"},
+{cereal:"Smacks",calories:"110"},
+{cereal:"Special K",calories:"110"},
+{cereal:"Strawberry Fruit Wheats",calories:"90"},
+{cereal:"Total Corn Flakes",calories:"110"},
+{cereal:"Total Raisin Bran",calories:"140"},
+{cereal:"Total Whole Grain",calories:"100"},
+{cereal:"Triples",calories:"110"},
+{cereal:"Trix",calories:"110"},
+{cereal:"Wheat Chex",calories:"100"},
+{cereal:"Wheaties",calories:"100"},
+{cereal:"Wheaties Honey Gold",calories:"110"},
+];
+new Chart(
+document.getElementById('mychart'),
+{
+type: 'bar',
+data: {
+labels: data.map(row => row.cereal),
+datasets: [
+{
+label: "calories",
+data: data.map(row => row.calories),
+fill:true,
+},
+]
+}
+}
+);
+
+</script>
+</body>
